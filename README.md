@@ -49,18 +49,37 @@ The software is structured as a centralized game loop managing three main functi
 
 Ensure you have the SFML development libraries configured on your path environment.
 
-**On Linux/Ubuntu:**
+## 🛠️ Compilation and Execution Guide
+
+This engine requires a C++ compiler supporting at least the C++11 standard, along with the **SFML (Simple and Fast Multimedia Library)** development packages.
+
 ```bash
-# Install dependencies
+# ==============================================================================
+# 🐧 OPTION 1: LINUX / UBUNTU SETUP
+# ==============================================================================
+
+# 1. Install SFML dependencies via package manager
+sudo apt-get update
 sudo apt-get install libsfml-dev
 
-# Compile the source code files
+# 2. Compile the source code into an object file and link binaries
 g++ -c main.cpp -I/usr/include
 g++ main.o -o candy_crush -lsfml-graphics -lsfml-window -lsfml-system
-**On Windows:**
-g++ -c main.cpp -I"C:\path\to\SFML\include"
-g++ main.o -o candy_crush -L"C:\path\to\SFML\lib" -lsfml-graphics -lsfml-window -lsfml-system
+
+# 3. Execute the game engine application
 ./candy_crush
 
-# Execute the application
-./candy_crush
+
+# ==============================================================================
+# 🪟 OPTION 2: WINDOWS SETUP (GCC/MinGW CLI)
+# ==============================================================================
+
+# 1. Compile and link the source code using your local MinGW paths
+# (Replace "C:\path\to\SFML" with your exact extracted SFML folder path)
+g++ -c main.cpp -I"C:\path\to\SFML\include"
+g++ main.o -o candy_crush.exe -L"C:\path\to\SFML\lib" -lsfml-graphics -lsfml-window -lsfml-system
+
+# 2. Run the game executable
+# (Ensure sfml-graphics-2.dll, sfml-window-2.dll, and sfml-system-2.dll 
+# from the SFML 'bin' directory are copied into this same folder first)
+candy_crush.exe
