@@ -1,6 +1,3 @@
-# Candy-Crush-Game-SFML
-A Candy Crush style game developed in C++ using SFML featuring special candies, scoring system, match detection, save/load functionality, and interactive gameplay.
-
 # 🍬 Candy Crush Engine — C++ & SFML
 
 An interactive, graphic-based 2D grid puzzle engine built in native C++ utilizing the **SFML (Simple and Fast Multimedia Library)** framework. Developed as a Programming Fundamentals semester project at FAST-NUCES, this application simulates standard match-3 architectural loops, dynamic board matrix state updates, and continuous player lifecycle serialization.
